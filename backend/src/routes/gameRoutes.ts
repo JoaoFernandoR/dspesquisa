@@ -6,7 +6,7 @@ const router = express.Router()
 
 
 // /games
-router.route('/').get(getAllGames)
+router.route('/').get(getAllGames )
 
 
 export default router
