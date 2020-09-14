@@ -1,0 +1,26 @@
+{
+  "name": "dspesquisa",
+  "version": "1.0.0",
+  "description": "Back-end da aplicação dspesquisa",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx ts-node-dev --transpile-only --ignore-watch node_modules --respawn index.ts",
+    "knex:migrate" : "knex --knexfile knexfile.ts migrate:latest",
+    "knex:rollback" : "knex --knexfile knexfile.ts migrate:rollback",    
+    "knex:seed" : "knex --knexfile knexfile.ts seed:run"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.10.1",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "sqlite3": "^5.0.0"
+  }
+}
