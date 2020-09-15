@@ -55,3 +55,10 @@ export const createRecord = async (request:Request, response: Response, next: Ne
 
 
 }
+
+// paginas, linhas por página, ordenado por momento descendente
+// parâmetros pela requisição; page 0, linesPerPage 12, orderBy moment, direction desc
+// min '', max '
+// converter o formato de string para o formato de data do javascript
+
+// select obj from record obj where obj.moment >= min AND obj.moment <= max
