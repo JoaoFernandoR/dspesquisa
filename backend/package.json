@@ -9,7 +9,7 @@
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
     "knex:rollback": "knex --knexfile knexfile.ts migrate:rollback",
     "knex:seed": "knex --knexfile knexfile.ts seed:run",
-    "start": "node index.ts"
+    "start": "npx ts-node-dev --transpile-only --ignore-watch node_modules --respawn index.ts"
   },
   "author": "",
   "license": "MIT",
