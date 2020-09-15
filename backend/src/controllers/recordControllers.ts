@@ -108,3 +108,22 @@ export const createRecord = async (request:Request, response: Response, next: Ne
 
 }
 
+export const deleteRecord = async (request:Request, response: Response, next:NextFunction) => {
+    try {
+
+        const result = await db('RECORD').where('id', request.params.id).del()
+
+        if(!result) throw Error('There is no entry with this ID in the database')
+
+        return response.status(200).json({
+            status: 'success',
+            data: result
+        })
+
+    } catch(err) {
+        return response.status(400).json({
+            status: 'fail',
+            message: err.message
+        })
+    }
+}
