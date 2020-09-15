@@ -11,5 +11,6 @@ app.use(express.json())
 app.use('/games', gameRoutes)
 app.use('/record', recordRoutes)
 
+const PORT = process.env.PORT || 3333
 
-app.listen(3333, () => console.log('Connected to the server...'))
+app.listen(PORT, () => console.log(`Connected to the port ${PORT}`))
