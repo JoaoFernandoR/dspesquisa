@@ -13,10 +13,12 @@ const Home = () => {
                 <h1 className="title"> Quais jogos a galera gosta mais ?</h1>
                 <h2 className="subtitle"> Clique no botão abaixo e saiba quais são os jogos que os gamers mais preferem</h2>
                 <div className="button_box">
-                    <div>
+                    <Link to='/tables'>
                         <h2>Quero saber quais são ?</h2>
-                    </div>
-                    <Link to='/tables'> <BsController size='3rem'/> </Link>
+                        <div className='icon_controller'>
+                            <BsController size='3rem'/>  
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
