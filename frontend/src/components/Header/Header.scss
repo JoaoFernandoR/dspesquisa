@@ -1,0 +1,22 @@
+#header {
+    background-color: #37474F;
+    padding: 1rem;
+
+    .header_info {
+        display: flex;
+        margin-left: 3rem;
+        align-items: center;
+
+        .icon {
+            color: var(--mainBlue);
+        }
+
+        h5 {
+            margin-left: 1rem;
+            color: white;
+            span {
+                color: var(--mainOrange);
+            }
+        }
+    }
+}

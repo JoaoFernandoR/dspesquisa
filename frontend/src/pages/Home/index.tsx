@@ -1,12 +1,11 @@
 import React from 'react'
 import { BsController} from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import data from '../../data/games'
+// import data from '../../data/games'
 // CSS
 import './Home.scss'
 
 const Home = () => {
-    {console.log(data)}
     return (
     <section id="home">
         <div className='container_home'>

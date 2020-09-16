@@ -5,7 +5,7 @@
     .container_home {
      
     max-width: 1200px;    
-    height: 100vh;
+    height: calc(100vh - 94px);
     margin: auto;
     display: flex;
     align-items: center;
