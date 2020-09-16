@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --mainBlue: #00D4FF;
+    --mainOrange: #ED7947;
+    --darkBlue: #0B1F34;
+    font-size: 90%;
+
+    @media (max-width : 1200px) {
+        font-size: 70%;
+    }
+}
+
+body {
+    // font-family: 'Play', sans-serif;
+    font-family: 'Press Start 2P', cursive
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
