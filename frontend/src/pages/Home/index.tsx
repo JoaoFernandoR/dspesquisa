@@ -14,7 +14,7 @@ const Home = () => {
                 <h2 className="subtitle"> Clique no botão abaixo e saiba quais são os jogos que os gamers mais preferem</h2>
                 <div className="button_box">
                     <Link to='/tables'>
-                        <h2>Quero saber quais são ?</h2>
+                        <h2>Quero saber quais são </h2>
                         <div className='icon_controller'>
                             <BsController size='3rem'/>  
                         </div>
