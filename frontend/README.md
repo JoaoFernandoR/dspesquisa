@@ -1,4 +1,4 @@
-#### This is a full stack project that i made following the DevSuperior Week. The back-end i did with Node instead of Java. The CSS i did all by myself, didnt copy anything, just used the Figma project and tried to copy it.
+#### This is a full stack project that i made following the DevSuperior Week. The back-end i did with Node instead of Java. The CSS i did by myself, didnt copy anything, just used the Figma project and tried to clone it.
 
 ## 🚪 Front-end
 * React with Typescript

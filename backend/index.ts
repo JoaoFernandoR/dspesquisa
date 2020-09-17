@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 // Rotas 
 import gameRoutes from './src/routes/gameRoutes'
 import recordRoutes from './src/routes/recordRoutes'
@@ -6,6 +7,7 @@ import initialRoute from './src/routes/initialRoute'
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 
 // Rotas

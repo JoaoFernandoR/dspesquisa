@@ -42,13 +42,16 @@ export const getAllRecords = async (request:Request, response:Response, next: Ne
             query.where('moment', '>=', queryCopy.min as string).where('moment' as any, '<=', queryCopy.max as string)
         }
 
+        query.join('GAME', 'RECORD.game_id', '=', 'GAME.id').join('GENRE', 'GAME.genre_id', '=', 'GENRE.id')
+        .select('GENRE.name as genreName', 'GAME.title as gameTitle', 'GAME.platform as gamePlatform', 'RECORD.name as name', 'RECORD.age as age', 'RECORD.moment as moment')
 
         const result = await query
+        
 
         return response.status(200).json({
             status: 'success',
             results: result.length,
-            message: result
+            data: result
         })
 
 
@@ -87,7 +90,7 @@ export const createRecord = async (request:Request, response: Response, next: Ne
                 id: idOfRecord[0],
                 moment: user[0].moment,
                 name: user[0].name,
-                age: user[0].id,
+                age: user[0].age,
                 gameTitle: game[0].title,
                 gamePlatform: game[0].platform,
                 genreName: genre[0].name
