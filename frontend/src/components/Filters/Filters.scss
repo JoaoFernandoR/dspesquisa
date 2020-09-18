@@ -1,0 +1,22 @@
+#filter_container {
+    background-color: var(--lightGrey);
+    width: 100%;
+    margin-bottom: 1.3rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0px 0px;
+    
+    a {
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 13px 60px;
+        color: var(--darkBlue);
+        background-color: var(--mainBlue);
+
+        &:hover {
+            background-color: var(--darkBlue);
+            color: var(--mainBlue);
+        }
+    }
+}

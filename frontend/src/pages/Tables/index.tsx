@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import moment from 'moment'
-import {Link} from 'react-router-dom'
 // Types
 import { RecordsResponse, RecordItem } from './types'
 // CSS
 import './Tables.scss'
 // Componentes
 import Pagination from './Pagination'
+import Filters from '../../components/Filters'
 
 
 const Tables = () => {
@@ -53,11 +53,7 @@ const Tables = () => {
     return (
     <section id="tables">
         <div className="container_table">
-            <div className="filter_container">
-                <Link to='charts'>
-                    Ver Gráficos
-                </Link>
-            </div>
+            <Filters link='/charts' linkText='Ver gráficos'/>
             <table cellPadding='0' cellSpacing='0' className="table">
                 <thead>
                     <tr>

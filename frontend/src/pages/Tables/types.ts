@@ -6,7 +6,7 @@ export type RecordsResponse = {
 export type RecordItem = {
     genreName: string,
     gameTitle: string,
-    gamePlatform: ['XBOX', 'PLAYSTATION', 'PC'],
+    gamePlatform: 'XBOX' | 'PLAYSTATION' | 'PC',
     name: string,
     age: number,
     moment: string
