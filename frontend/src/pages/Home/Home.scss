@@ -1,15 +1,14 @@
 #home {
-    background-image: url('../../assets/images/Vector.png');
-    background-repeat: no-repeat;
-    background-position-y: 330px;
-    background-size: cover;
-    background-color: var(--darkBlue);
+    background: linear-gradient(52deg, rgba(2,0,36,1) 0%, rgba(55,73,97,1) 51%, rgba(0,212,255,1) 100%);
+    // background-repeat: no-repeat, no-repeat;
+    // background-position-y: none, 800px;
+    // background-size: none, cover;
     padding: 1rem;
-
+    
     .container_home {
-     
-    max-width: 1200px;    
+        
     height: calc(100vh - 94px);
+    max-width: 1200px;    
     margin: auto;
     display: flex;
     align-items: center;
