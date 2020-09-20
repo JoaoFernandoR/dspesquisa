@@ -31,11 +31,11 @@ const Charts = () => {
     const fetchData = async() => {
         const Promise1 = await axios({
             method: 'GET',
-            url : `http://localhost:3333/games`
+            url : `https://dspesquisa1.herokuapp.com/games`
         })
         const Promise2 = await axios({
           method: 'GET',
-          url : `http://localhost:3333/record`
+          url : `https://dspesquisa1.herokuapp.com/record`
       })
       Promise.all([Promise1, Promise2]).then((values) => {
         setGames(values[0].data.data)

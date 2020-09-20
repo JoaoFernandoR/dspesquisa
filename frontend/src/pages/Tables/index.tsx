@@ -19,7 +19,7 @@ const Tables = () => {
         const fetchData = async() => {
             await axios({
                 method: 'GET',
-                url : `http://localhost:3333/record?linesPerPage=12&page=${activePage + 1}`
+                url : `https://dspesquisa1.herokuapp.com/record?linesPerPage=12&page=${activePage + 1}`
             }).then((result) => {
                 setData(result.data)
             })
