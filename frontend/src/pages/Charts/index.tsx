@@ -8,6 +8,7 @@ import { buildBarSeries, getGenderChartData, getPlatformChartData } from './help
 import './Charts.scss'
 // Components
 import Filters from '../../components/Filters'
+import Loading from '../Loading/'
 
 type PieChartData = {
   labels: string[];

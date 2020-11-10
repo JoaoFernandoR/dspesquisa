@@ -8,6 +8,7 @@ import './Tables.scss'
 // Componentes
 import Pagination from './Pagination'
 import Filters from '../../components/Filters'
+import Loading from '../Loading'
 
 
 const Tables = () => {
@@ -49,33 +50,37 @@ const Tables = () => {
         setActivePage(index)
     }
 
-
-    return (
-    <section id="tables">
-        <div className="container_table">
-            <Filters link='/charts' linkText='Ver gráficos'/>
-            <table cellPadding='0' cellSpacing='0' className="table">
-                <thead>
-                    <tr>
-                        <th> INSTANTE</th>
-                        <th> NOME </th>
-                        <th> IDADE </th>
-                        <th> PLATAFORMA </th>
-                        <th> GÊNERO </th>
-                        <th> TÍTULO DO GAME </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {renderItem()}
-                </tbody>
-            </table>    
-            <Pagination 
-                activePage={activePage}
-                totalPages={data?.results}
-                goToPage={handlePagination}/>
-        </div>
-    </section>
+    if (data === undefined) {
+        return <Loading />
+    }
+    else {
+        return (
+        <section id="tables">
+            <div className="container_table">
+                <Filters link='/charts' linkText='Ver gráficos'/>
+                <table cellPadding='0' cellSpacing='0' className="table">
+                    <thead>
+                        <tr>
+                            <th> INSTANTE</th>
+                            <th> NOME </th>
+                            <th> IDADE </th>
+                            <th> PLATAFORMA </th>
+                            <th> GÊNERO </th>
+                            <th> TÍTULO DO GAME </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {renderItem()}
+                    </tbody>
+                </table>    
+                <Pagination 
+                    activePage={activePage}
+                    totalPages={data?.results}
+                    goToPage={handlePagination}/>
+            </div>
+        </section>
     )
+    }
 }
 
 export default Tables
